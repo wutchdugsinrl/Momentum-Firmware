@@ -1,4 +1,4 @@
-# https://github.com/Next-Flip/Momentum-Firmware/blob/dev/scripts/asset_packer.py
+#!/usr/bin/env python
 from PIL import Image, ImageOps
 import heatshrink2
 import pathlib
