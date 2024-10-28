@@ -6,7 +6,7 @@
         - Fix duplicated frequency lists and use user config for nearest frequency selector too
         - Fix buttons logic, **fix crash**
     - Protocol improvements: 
-        - **Keeloq: Monarch full support, with add manually option** (thanks to anonymous contributor (TBA))
+        - **Keeloq: Monarch full support, with add manually option** (thanks @ashphx !)
         - **Princeton support for second button encoding type** (8bit)
         - GangQi fix serial check and remove broken check from UI
         - Hollarm add more button codes (thanks to @mishamyte for captures)
