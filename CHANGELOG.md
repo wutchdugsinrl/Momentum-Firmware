@@ -1,43 +1,45 @@
 ## Main changes
 - SubGHz:
     - Frequency analyzer fixes and improvements:
-        - Enforce int module (like in OFW) usage due to lack of required hardware on external boards (PathIsolate (+rf switch for multiple paths)) and incorrect usage and/or understanding the purpose of frequency analyzer app by users, it should be used only to get frequency of the remote placed around 1-10cm around flipper's left corner
-        - Fix possible GSM mobile towers signal interference by limiting upper frequency to 920mhz max
+        - **Enforce int module** (like in OFW) usage due to lack of required hardware on external boards (PathIsolate (+rf switch for multiple paths)) and incorrect usage and/or understanding the purpose of frequency analyzer app by users, it should be used only to get frequency of the remote placed around 1-10cm around flipper's left corner
+        - **Fix possible GSM mobile towers signal interference** by limiting upper frequency to 920mhz max
         - Fix duplicated frequency lists and use user config for nearest frequency selector too
-        - Fix buttons logic, fix crash
+        - Fix buttons logic, **fix crash**
     - Protocol improvements: 
-        - Keeloq: Monarch full support, with add manually option (thanks to anonymous contributor (TBA))
-        - Princeton support for second button encoding type (8bit)
+        - **Keeloq: Monarch full support, with add manually option** (thanks to anonymous contributor (TBA))
+        - **Princeton support for second button encoding type** (8bit)
         - GangQi fix serial check and remove broken check from UI
         - Hollarm add more button codes (thanks to @mishamyte for captures)
     - Misc:
         - Add extra settings to disable GPIO pins control used for external modules amplifiers and/or LEDs (in radio settings menu with debug ON)
 - NFC:
-    - Read Ultralight block by block (by @mishamyte | PR #825 #826)
-    - Update NDEF parser (by @jaylikesbunda and @Willy-JL)
-    - OFW PR 3822: MIFARE Classic Key Recovery Improvements (by @noproto)
+    - Read Ultralight block by block (**fix password protected MFUL reading issue**) (by @mishamyte | PR #825 #826)
+    - **Update NDEF parser** (SLIX and MFC support) (by @luu176 and @jaylikesbunda and @Willy-JL)
+    - OFW PR 3822: **MIFARE Classic Key Recovery Improvements** (by @noproto)
     - OFW PR 3930: NFC Emulation freeze (by @RebornedBrain)
     - OFW PR 3885: Add API to enforce ISO15693 mode (by @aaronjamt)
     - OFW: iso14443_4a improvements (by @RebornedBrain)
-    - OFW: Plantain parser improvements (by @assasinfil)
+    - OFW: Plantain parser improvements (by @assasinfil) & fixes (by @mxcdoam)
     - OFW: Moscow social card parser (by @assasinfil)
     - OFW: NFC: H World Hotel Chain Room Key Parser
     - OFW: NFC Parser for Tianjin Railway Transit
     - OFW: NFC TRT Parser: Additional checks to prevent false positives
     - New keys in system dict
 - Infrared: 
-    - Add LEDs universal remote (DB by @amec0e)
+    - **Add LEDs universal remote** (DB by @amec0e)
     - Update universal remote assets (by @amec0e | PR #813 #816)
 - JS:
     - OFW: JS modules -> **Breaking API change**
-    - Backporting custom features - WIP (by @xMasterX and @Willy-JL)
+    - **Backporting custom features** (read about most of the changes after other changes section) (by @xMasterX and @Willy-JL)
     - Add i2c module (by @jamisonderek)
+    - Add SPI module (by @jamisonderek)
 * OFW: FuriHal, drivers: rework gauge initialization routine -> **Downgrade to older releases will break battery UI percent indicator, upgrade to this or newer version to restore**
 * OFW: heap: increased size -> **More free RAM!!**
 * OFW: New layout for BadUSB (es-LA)
 * OFW: Require PIN on boot
 * Apps: **Check out more Apps updates and fixes by following** [this link](https://github.com/xMasterX/all-the-plugins/commits/dev)
 ## Other changes
+* OFW PR 3971: Fix JS memory corruption (in gpio module) (by @portasynthinca3)
 * OFW: lib: digital_signal: digital_sequence: add furi_hal.h wrapped in ifdefs
 * OFW: Add warning about stealth mode in vibro CLI
 * OFW: Small fixes in the wifi devboard docs
@@ -59,6 +61,49 @@
 * OFW: Folder rename fails
 * OFW: Put errno into TCB
 * OFW: Fix USB-UART bridge exit screen stopping the bridge prematurely
+**More details on JS changes** (js changelog written by @Willy-JL , thanks!):
+- Non-exhaustive list of changes to help you fix your scripts:
+    - `badusb`:
+      - `setup()`: `mfr_name`, `prod_name`, `layout_path` parameters renamed to `mfrName`, `prodName`, `layoutPath`
+      - effort required to update old scripts using badusb: very minimal
+    - `dialog`:
+      - removed, now replaced by `gui/dialog` and `gui/file_picker` (see below)
+    - `event_loop`:
+      - new module, allows timer functionality, callbacks and event-driven programming, used heavily alongside gpio and gui modules
+    - `gpio`:
+      - fully overhauled, now you `get()` pin instances and perform actions on them like `.init()`
+      - now supports interrupts, callbacks and more cool things
+      - effort required to update old scripts using gpio: moderate
+    - `gui`:
+      - new module, fully overhauled, replaces dialog, keyboard, submenu, textbox modules
+      - higher barrier to entry than older modules (requires usage of `event_loop` and `gui.viewDispatcher`), but much more flexible, powerful and easier to extend
+      - includes all previously available js gui functionality (except `widget`), and also adds `gui/loading` and `gui/empty_screen` views
+      - currently `gui/file_picker` works different than other new view objects, it is a simple `.pickFile()` synchronous function, but this [may change later](https://github.com/flipperdevices/flipperzero-firmware/pull/3961#discussion_r1805579153)
+      - effort required to update old scripts using gui: extensive
+    - `keyboard`:
+      - removed, now replaced by `gui/text_input` and `gui/byte_input` (see above)
+    - `math`:
+      - `is_equal()` renamed to `isEqual()`
+    - `storage`:
+      - fully overhauled, now you `openFile()`s and perform actions on them like `.read()`
+      - now supports many more operations including different open modes, directories and much more
+      - effort required to update old scripts using storage: moderate
+    - `submenu`:
+      - removed, now replaced by `gui/submenu` (see above)
+    - `textbox`:
+      - removed, now replace by `gui/text_box` (see above)
+    - `widget`:
+      - only gui functionality not ported to new gui module, remains unchanged for now but likely to be ported later on
+    - globals:
+      - `__filepath` and `__dirpath` renamed to `__filename` and `__dirname` like in nodejs
+      - `to_string()` renamed and moved to number class as `n.toString()`, now supports optional base parameter
+      - `to_hex_string()` removed, now use `n.toString(16)`
+      - `parse_int()` renamed to `parseInt()`, now supports optional base parameter
+      - `to_upper_case()` and `to_lower_case()` renamed and moved to string class as `s.toUpperCase()` and `s.toLowerCase()`
+      - effort required to update old scripts using these: minimal
+  - Added type definitions (typescript files for type checking in IDE, Flipper does not run typescript)
+  - Documentation is incomplete and deprecated, from now on you should refer to type definitions (`applications/system/js_app/types`), those will always be correct
+  - Type definitions for extra modules we have that OFW doesn't will come later
 <br><br>
 #### Known NFC post-refactor regressions list: 
 - Mifare Mini clones reading is broken (original mini working fine) (OFW)
