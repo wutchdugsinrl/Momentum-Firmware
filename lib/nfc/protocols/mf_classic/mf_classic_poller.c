@@ -1933,7 +1933,7 @@ NfcCommand mf_classic_poller_handler_nested_controller(MfClassicPoller* instance
         }
         if(!(dict_attack_ctx->auth_passed)) {
             dict_attack_ctx->attempt_count++;
-        } else if(dict_attack_ctx->auth_passed && !(initial_dict_attack_iter)) {
+        } else if(!(initial_dict_attack_iter)) {
             dict_attack_ctx->nested_target_key++;
             dict_attack_ctx->attempt_count = 0;
         }
