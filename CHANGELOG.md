@@ -89,6 +89,7 @@
 - OFW: Dolphin: Happy mode in Desktop settings (by @portasynthinca3)
 - OFW: CLI: Improvements part I, `neofetch` command (by @portasynthinca3), fix for lab.flipper.net (by @xMasterX)
 - GUI:
+  - ByteInput supports ASCII input (by @Willy-JL)
   - OFW: Add up and down button drawing functions to GUI elements (by @DerSkythe)
   - OFW: Extended icon draw function in Canvas (by @RebornedBrain)
 - OFW: RPC: Support 5V on GPIO control for ext. modules (by @gsurkov)
