@@ -177,6 +177,7 @@
   - Fallback SD format prompt when storage settings is unavailable (by @Willy-JL)
   - OFW: Fix folder rename fails (by @portasynthinca3)
 - About: Fix BLE stack version string (by @Willy-JL)
+- RPC: Fixed apps not updating and staying at 100% (by @Willy-JL)
 - OFW: Loader: Warn about missing SD card for main apps (by @Willy-JL)
 - NFC:
   - UL: Read Ultralight block by block (by @mishamyte)
