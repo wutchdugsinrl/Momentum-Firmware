@@ -1704,7 +1704,7 @@ NfcCommand mf_classic_poller_handler_nested_log(MfClassicPoller* instance) {
         if(weak_prng && (!(static_encrypted)) && (dict_attack_ctx->nested_nonce.count != 2)) {
             FURI_LOG_E(
                 TAG,
-                "MfClassicPollerStateNestedLog expected 2 nonces, received %u",
+                "MfClassicPollerStateNestedLog expected 2 nonces, received %zu",
                 dict_attack_ctx->nested_nonce.count);
             break;
         }
