@@ -62,7 +62,7 @@
   - UL: Add GangQi protocol (static 34 bit) with button parsing and add manually (by @xMasterX & @Skorpionm)
   - UL: Add Hollarm protocol (static 42 bit) with button parsing and add manually (by @xMasterX & @Skorpionm)
   - UL: Add Hay21 protocol (dynamic 21 bit) with button parsing (by @xMasterX)
-  - UL: Add Keeloq Monarch full support, with add manually (by anonymous UL contributor)
+  - UL: Add Keeloq Monarch full support, with add manually (by @ashphx)
   - UL: Princeton custom buttons support (by @xMasterX)
 - NFC:
   - OFW: MIFARE Classic Key Recovery Improvements (PR 3822 by @noproto)
@@ -124,7 +124,7 @@
   - Added 6 new Mifare Classic keys from Bulgaria Hotel (#216 by @z3r0l1nk)
   - UL: Add iq aparts hotel key (by @xMasterX)
   - OFW/UL: Rename 'Detect Reader' to 'Extract MFC Keys' (by @bettse & @xMasterX)
-  - OFW: Plantain parser improvements (by @assasinfil)
+  - OFW: Plantain parser improvements (by @assasinfil) and fixes (by @mxcdoam)
   - OFW: Moscow social card parser (by @assasinfil)
   - OFW: Fixes and improvements to iso14443_4a listener and poller (by @RebornedBrain)
   - OFW: Update BART station codes in Clipper plugin (by @ted-logan)
