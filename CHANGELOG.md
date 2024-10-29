@@ -48,6 +48,8 @@
   - Added type definitions (typescript files for type checking in IDE, Flipper does not run typescript)
   - Documentation is incomplete and deprecated, from now on you should refer to type definitions (`applications/system/js_app/types`), those will always be correct
   - Type definitions for extra modules we have that OFW doesn't will come later
+- GUI: Refactored TextInput illegal symbols (by @Willy-JL)
+  - If your app used `text_input_add_illegal_symbols(text_input)` it should change to `text_input_show_illegal_symbols(text_input, true)`
 
 ### Added:
 - Apps:
