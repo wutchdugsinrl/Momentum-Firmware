@@ -4,4 +4,4 @@
 // Then, we still use the Header from original code as if nothing happened
 
 // bt_get_settings(), bt_set_settings()
-#include <applications/services/bt/bt_service/bt_api.c>
+#include <applications/services/bt/bt_service/bt_settings_api.c>
