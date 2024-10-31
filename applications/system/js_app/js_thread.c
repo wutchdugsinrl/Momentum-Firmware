@@ -246,10 +246,29 @@ static int32_t js_thread(void* arg) {
     mjs_val_t global = mjs_get_global(mjs);
     mjs_val_t console_obj = mjs_mk_object(mjs);
 
+    if(worker->path) {
+        FuriString* dirpath = furi_string_alloc();
+        path_extract_dirname(furi_string_get_cstr(worker->path), dirpath);
+        mjs_set(
+            mjs,
+            global,
+            "__filename",
+            ~0,
+            mjs_mk_string(
+                mjs, furi_string_get_cstr(worker->path), furi_string_size(worker->path), true));
+        mjs_set(
+            mjs,
+            global,
+            "__dirname",
+            ~0,
+            mjs_mk_string(mjs, furi_string_get_cstr(dirpath), furi_string_size(dirpath), true));
+        furi_string_free(dirpath);
+    }
+
     JS_ASSIGN_MULTI(mjs, global) {
         JS_FIELD("print", MJS_MK_FN(js_print));
         JS_FIELD("delay", MJS_MK_FN(js_delay));
-        JS_FIELD("toString", MJS_MK_FN(js_global_to_string));
+        JS_FIELD("parseInt", MJS_MK_FN(js_parse_int));
         JS_FIELD("ffi_address", MJS_MK_FN(js_ffi_address));
         JS_FIELD("require", MJS_MK_FN(js_require));
         JS_FIELD("console", console_obj);
