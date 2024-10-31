@@ -30,7 +30,7 @@
  * |----------------------|------------------|
  * | `button_menu`        | ❌               |
  * | `button_panel`       | ❌               |
- * | `byte_input`         | ❌               |
+ * | `byte_input`         | ✅               |
  * | `dialog_ex`          | ✅ (as `dialog`) |
  * | `empty_screen`       | ✅               |
  * | `file_browser`       | ❌               |
