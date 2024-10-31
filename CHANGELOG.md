@@ -64,7 +64,7 @@
   - UL: Add GangQi protocol (static 34 bit) with button parsing and add manually (by @xMasterX & @Skorpionm)
   - UL: Add Hollarm protocol (static 42 bit) with button parsing and add manually (by @xMasterX & @Skorpionm)
   - UL: Add Hay21 protocol (dynamic 21 bit) with button parsing (by @xMasterX)
-  - UL: Add Keeloq Monarch full support, with add manually (by @ashphx)
+  - UL: Add Keeloq Monarch full support, with add manually (by @ashphx & @xMasterX)
   - UL: Princeton custom buttons support (by @xMasterX)
 - NFC:
   - OFW: MIFARE Classic Key Recovery Improvements (PR 3822 by @noproto)
@@ -82,7 +82,9 @@
 - JS:
   - New `i2c` module (#259 by @jamisonderek)
   - New `spi` module (#272 by @jamisonderek)
+  - OFW: Full-fledged JS SDK + npm packages (by @portasynthinca3)
 - RPC: Added ASCII event support (#284 by @Willy-JL)
+- OFW: Settings: Clock editing & Alarm function (目覚め時計) (by @skotopes)
 - BadKB:
   - OFW: Add linux/gnome badusb demo files (by @thomasnemer)
   - Add older qFlipper install demos for windows and macos (by @DXVVAY & @grugnoymeme)
@@ -98,6 +100,7 @@
 - Furi:
   - OFW: Add FuriEventLoop support for FuriEventFlag, simplify API (by @Skorpionm)
   - OFW: Put errno into TCB, better integration with libc (by @portasynthinca3)
+  - OFW: FuriHalRtc Alarm support (目覚め時計) (by @skotopes)
 
 ### Updated:
 - Apps:
@@ -134,6 +137,7 @@
   - OFW: Moscow social card parser (by @assasinfil)
   - OFW: Fixes and improvements to iso14443_4a listener and poller (by @RebornedBrain)
   - OFW: Update BART station codes in Clipper plugin (by @ted-logan)
+  - OFW: Add Caltrain zones for Clipper parser (by @tomholford)
 - Sub-GHz:
   - UL: Frequency analyzer fixes and improvements (by @xMasterX):
     - Enforce int module (like in OFW) usage due to lack of required hardware on external boards (PathIsolate (+rf switch for multiple paths)) and incorrect usage and/or understanding the purpose of frequency analyzer app by users, it should be used only to get frequency of the remote placed around 1-10cm around flipper's left corner
@@ -164,6 +168,7 @@
   - OFW: Update and cleanup (by @rnadyrshin)
   - OFW: Improve bit_buffer.h docs (by @Astrrra)
   - OFW: Wi-Fi Devboard documentation rework (by @rnadyrshin)
+  - OFW: Update unit tests docs (by @portasynthinca3)
 
 ### Fixed:
 - RFID:
@@ -183,10 +188,10 @@
 - RPC: Fixed apps not updating and staying at 100% (by @Willy-JL)
 - OFW: Loader: Warn about missing SD card for main apps (by @Willy-JL)
 - NFC:
-  - UL: Read Ultralight block by block (by @mishamyte)
   - OFW: Fix crash on Ultralight unlock (by @Astrrra)
   - OFW: FeliCa anti-collision fix (by @RebornedBrain)
   - OFW: Emulation freeze fixed when pressing OK repeatedly (by @RebornedBrain)
+  - OFW: Fixed bug with reading pwd locked MFULs (by @mishamyte)
 - OFW: RPC: Broken file interaction fixes (by @RebornedBrain)
 - OFW: GPIO: Fix USB-UART bridge exit screen stopping the bridge prematurely (by @portasynthinca3)
 - OFW: GUI: Fix dialog_ex NULL ptr crash (by @Willy-JL)
