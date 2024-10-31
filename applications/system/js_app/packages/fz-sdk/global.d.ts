@@ -120,6 +120,7 @@ declare function checkSdkCompatibility(expectedMajor: number, expectedMinor: num
  *          recognized as a baseline feature. For more info, consult the module
  *          documentation.
  * @param features Array of named features to query
+ * @version Added in JS SDK 0.1
  */
 declare function doesSdkSupport(features: string[]): boolean;
 
@@ -131,6 +132,7 @@ declare function doesSdkSupport(features: string[]): boolean;
  *          features that are now recognized as baseline features. For more
  *          info, consult the module documentation.
  * @param features Array of named features to query
+ * @version Added in JS SDK 0.1
  */
 declare function checkSdkFeatures(features: string[]): void | never;
 
