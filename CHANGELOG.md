@@ -95,7 +95,9 @@
   - OFW: Extended icon draw function in Canvas (by @RebornedBrain)
 - OFW: RPC: Support 5V on GPIO control for ext. modules (by @gsurkov)
 - OFW: Toolbox: Proper integer parsing library `strint` (by @portasynthinca3)
-- OFW: Furi: Put errno into TCB (by @portasynthinca3)
+- Furi:
+  - OFW: Add FuriEventLoop support for FuriEventFlag, simplify API (by @Skorpionm)
+  - OFW: Put errno into TCB, better integration with libc (by @portasynthinca3)
 
 ### Updated:
 - Apps:
