@@ -1,5 +1,5 @@
 {
-  "name": "@flipperdevices/fz-sdk",
+  "name": "@next-flip/fz-sdk-mntm",
   "version": "0.1.1",
   "description": "Type declarations and documentation for native JS modules available on Flipper Zero",
   "keywords": [
@@ -11,7 +11,7 @@
   "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flipperdevices/flipperzero-firmware.git",
+    "url": "git+https://github.com/Next-Flip/Momentum-Firmware.git",
     "directory": "applications/system/js_app/packages/fz-sdk"
   },
   "type": "module",

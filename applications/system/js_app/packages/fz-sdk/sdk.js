@@ -19,7 +19,7 @@ async function build(config) {
         bundle: true,
         minify: config.minify,
         external: [
-            "@flipperdevices/fz-sdk/*"
+            "@next-flip/fz-sdk-mntm/*"
         ],
         supported: {
             "array-spread": false,
@@ -73,6 +73,8 @@ async function build(config) {
 
     let outContents = fs.readFileSync(config.output, "utf8");
     outContents = "let exports = {};\n" + outContents;
+
+    // TODO: Transform CFW SDK name to OFW SDK name so all firmwares understand it
 
     if (config.enforceSdkVersion) {
         const version = json5.parse(fs.readFileSync(path.join(__dirname, "package.json"), "utf8")).version;

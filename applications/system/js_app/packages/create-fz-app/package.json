@@ -1,5 +1,5 @@
 {
-  "name": "@flipperdevices/create-fz-app",
+  "name": "@next-flip/create-fz-app-mntm",
   "version": "0.1.0",
   "description": "Template package for JS apps Flipper Zero",
   "bin": "index.js",
@@ -12,7 +12,7 @@
   "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flipperdevices/flipperzero-firmware.git",
+    "url": "git+https://github.com/Next-Flip/Momentum-Firmware.git",
     "directory": "applications/system/js_app/packages/create-fz-app"
   },
   "dependencies": {

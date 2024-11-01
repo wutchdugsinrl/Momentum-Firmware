@@ -5,7 +5,7 @@ applications in JavaScript.
 ## Getting started
 Create your application using the interactive wizard:
 ```shell
-npx @flipperdevices/create-fz-app@latest
+npx @next-flip/create-fz-app-mntm@latest
 ```
 
 Then, enter the directory with your application and launch it:

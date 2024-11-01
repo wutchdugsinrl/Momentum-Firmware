@@ -7,7 +7,7 @@
         "target": "ES2015",
     },
     "files": [
-        "./node_modules/@flipperdevices/fz-sdk/global.d.ts",
+        "./node_modules/@next-flip/fz-sdk-mntm/global.d.ts",
     ],
     "include": [
         "./**/*.ts",
