@@ -12,6 +12,7 @@
         - Hollarm add more button codes (thanks to @mishamyte for captures)
     - Misc:
         - Add extra settings to disable GPIO pins control used for external modules amplifiers and/or LEDs (in radio settings menu with debug ON)
+        - Code cleanup and fix for rare dupicated "Data" field cases
 - NFC:
     - Read Ultralight block by block (**fix password protected MFUL reading issue**) (by @mishamyte | PR #825 #826)
     - **Update NDEF parser** (SLIX and MFC support) (by @luu176 and @jaylikesbunda and @Willy-JL)
@@ -39,7 +40,14 @@
 * OFW: Require PIN on boot
 * Apps: **Check out more Apps updates and fixes by following** [this link](https://github.com/xMasterX/all-the-plugins/commits/dev)
 ## Other changes
-* OFW PR 3971: Fix JS memory corruption (in gpio module) (by @portasynthinca3)
+* OFW: fix: npm deps
+* OFW: 目覚め時計
+* OFW: JS: Backport and more additions & fixes 
+* OFW: nfc: add Caltrain zones for Clipper
+* OFW: Update unit tests docs
+* OFW: Fix JS memory corruption (in gpio module)
+* OFW: Full-fledged JS SDK + npm packages 
+* OFW: FurEventLoop: add support for FuriEventFlag, simplify API
 * OFW: lib: digital_signal: digital_sequence: add furi_hal.h wrapped in ifdefs
 * OFW: Add warning about stealth mode in vibro CLI
 * OFW: Small fixes in the wifi devboard docs
