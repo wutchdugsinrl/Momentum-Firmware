@@ -3,7 +3,6 @@
     - Frequency analyzer fixes and improvements:
         - **Enforce int module** (like in OFW) usage due to lack of required hardware on external boards (PathIsolate (+rf switch for multiple paths)) and incorrect usage and/or understanding the purpose of frequency analyzer app by users, it should be used only to get frequency of the remote placed around 1-10cm around flipper's left corner
         - **Fix possible GSM mobile towers signal interference** by limiting upper frequency to 920mhz max
-        - Fix duplicated frequency lists and use user config for nearest frequency selector too
         - Fix buttons logic, **fix crash**
     - Protocol improvements: 
         - **Keeloq: Monarch full support, with add manually option** (thanks @ashphx !)
@@ -12,36 +11,36 @@
         - Hollarm add more button codes (thanks to @mishamyte for captures)
     - Misc:
         - Add extra settings to disable GPIO pins control used for external modules amplifiers and/or LEDs (in radio settings menu with debug ON)
-        - Code cleanup and fix for rare dupicated "Data" field cases
 - NFC:
     - Read Ultralight block by block (**fix password protected MFUL reading issue**) (by @mishamyte | PR #825 #826)
     - **Update NDEF parser** (SLIX and MFC support) (by @luu176 and @jaylikesbunda and @Willy-JL)
     - OFW PR 3822: **MIFARE Classic Key Recovery Improvements** (by @noproto)
-    - OFW PR 3930: NFC Emulation freeze (by @RebornedBrain)
-    - OFW PR 3885: Add API to enforce ISO15693 mode (by @aaronjamt)
-    - OFW: iso14443_4a improvements (by @RebornedBrain)
-    - OFW: Plantain parser improvements (by @assasinfil) & fixes (by @mxcdoam)
-    - OFW: Moscow social card parser (by @assasinfil)
-    - OFW: NFC: H World Hotel Chain Room Key Parser
-    - OFW: NFC Parser for Tianjin Railway Transit
-    - OFW: NFC TRT Parser: Additional checks to prevent false positives
+    - OFW PR 3930: NFC Emulation freeze fix (by @RebornedBrain)
+    - OFW: H World Hotel Chain Room Key Parser
+    - OFW: Parser for Tianjin Railway Transit
     - New keys in system dict
 - Infrared: 
     - **Add LEDs universal remote** (DB by @amec0e)
     - Update universal remote assets (by @amec0e | PR #813 #816)
 - JS:
-    - OFW: JS modules -> **Breaking API change**
+    - OFW: JS modules & SDK -> **Breaking API change**
     - **Backporting custom features** (read about most of the changes after other changes section) (by @xMasterX and @Willy-JL)
-    - Add i2c module (by @jamisonderek)
-    - Add SPI module (by @jamisonderek)
-* OFW: FuriHal, drivers: rework gauge initialization routine -> **Downgrade to older releases will break battery UI percent indicator, upgrade to this or newer version to restore**
+    - Add i2c & SPI module (by @jamisonderek)
+* OFW: FuriHal, drivers: rework gauge initialization routine -> **Downgrade to older releases may break battery UI percent indicator, upgrade to this or newer version to restore**
 * OFW: heap: increased size -> **More free RAM!!**
 * OFW: New layout for BadUSB (es-LA)
 * OFW: Require PIN on boot
 * Apps: **Check out more Apps updates and fixes by following** [this link](https://github.com/xMasterX/all-the-plugins/commits/dev)
 ## Other changes
+* SubGHz: Freq analyzer - Fix duplicated frequency lists and use user config for nearest frequency selector too
+* SubGHz: Code cleanup and fix for rare dupicated (Data) field cases
+* OFW: NFC TRT Parser: Additional checks to prevent false positives
+* OFW PR 3885: NFC: Add API to enforce ISO15693 mode (by @aaronjamt)
+* OFW: NFC: iso14443_4a improvements (by @RebornedBrain)
+* OFW: NFC: Plantain parser improvements (by @assasinfil) & fixes (by @mxcdoam)
+* OFW: NFC: Moscow social card parser (by @assasinfil)
 * OFW: fix: npm deps
-* OFW: 目覚め時計
+* OFW: 目覚め時計 (Added alarm option and clock settings)
 * OFW: JS: Backport and more additions & fixes 
 * OFW: nfc: add Caltrain zones for Clipper
 * OFW: Update unit tests docs
