@@ -10,6 +10,9 @@ import json5 from "json5";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const cfwSdkName = "@next-flip/fz-sdk-mntm/";
+const ofwSdkName = "@flipperdevices/fz-sdk/";
+
 async function build(config) {
     await esbuild.build({
         entryPoints: ["./dist/index.js"],
@@ -74,7 +77,8 @@ async function build(config) {
     let outContents = fs.readFileSync(config.output, "utf8");
     outContents = "let exports = {};\n" + outContents;
 
-    // TODO: Transform CFW SDK name to OFW SDK name so all firmwares understand it
+    // Transform CFW SDK name to OFW SDK name so all firmwares understand it
+    outContents = outContents.replaceAll(`require("${cfwSdkName}`, `require("${ofwSdkName}`);
 
     if (config.enforceSdkVersion) {
         const version = json5.parse(fs.readFileSync(path.join(__dirname, "package.json"), "utf8")).version;
