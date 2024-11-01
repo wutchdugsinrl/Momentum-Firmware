@@ -180,6 +180,7 @@
 - Sub-GHz:
   - Fix GPS "Latitute" typo, switch to "Lat" and "Lon" in .sub files (#246 by @m7i-org)
   - UL: Fix zero issues in Princeton (by @xMasterX)
+  - UL: Code cleanup and fix for rare dupicated "Data" field cases (by @xMasterX)
 - Power: Suppress Shutdown on Idle While Charging / Plugged In (#244 by @luu176)
 - Storage:
   - Fallback SD format prompt when storage settings is unavailable (by @Willy-JL)
