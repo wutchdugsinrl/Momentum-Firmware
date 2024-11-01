@@ -9,7 +9,7 @@
 #define PLUGIN_APP_ID      "js"
 #define PLUGIN_API_VERSION 1
 
-#define JS_SDK_VENDOR_FIRMWARE "unleashed"
+#define JS_SDK_VENDOR_FIRMWARE "momentum"
 #define JS_SDK_VENDOR          "flipperdevices"
 #define JS_SDK_MAJOR           0
 #define JS_SDK_MINOR           1
