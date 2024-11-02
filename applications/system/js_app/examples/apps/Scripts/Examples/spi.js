@@ -8,8 +8,9 @@ let spi = require("spi");
 // Display textbox so user can scroll to see all output.
 let eventLoop = require("event_loop");
 let gui = require("gui");
+let textBoxView = require("gui/text_box");
 let text = "SPI demo\n";
-let textBox = require("gui/text_box").makeWith({
+let textBox = textBoxView.makeWith({
     focus: "end",
     font: "text",
     text: text,
