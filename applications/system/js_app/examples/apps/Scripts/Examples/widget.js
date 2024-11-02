@@ -1,3 +1,6 @@
+// Script cannot work without widget module so check before
+checkSdkFeatures(["widget"]);
+
 let widget = require("widget");
 
 let demo_seconds = 30;
@@ -34,8 +37,12 @@ widget.addDot(102, 44);
 widget.addDot(104, 43);
 
 // add an icon (x, y, icon)
-widget.addIcon(100, 50, "ButtonUp_7x4");
-widget.addIcon(100, 55, "ButtonDown_7x4");
+// not available in all firmwares, but not essential for this script's
+// functionality, so we just check at runtime and use it if it is available
+if (doesSdkSupport(["widget-addicon"])) {
+    widget.addIcon(100, 50, "ButtonUp_7x4");
+    widget.addIcon(100, 55, "ButtonDown_7x4");
+}
 
 // add a glyph (x, y, glyph)
 widget.addGlyph(115, 50, "#".charCodeAt(0));

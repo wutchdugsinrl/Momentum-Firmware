@@ -298,15 +298,18 @@ export declare function isSubpathOf(parentPath: string, childPath: string): bool
  * Initialize virtual mount api with disk image at given path.
  * Errors on failure.
  * @param parentPath Path to disk image file
+ * @version Available with JS feature `storage-virtual`
  */
 export declare function virtualInit(path: string): void;
 /**
  * Mount selected disk image at /mnt path.
  * Errors on failure.
+ * @version Available with JS feature `storage-virtual`
  */
 export declare function virtualMount(): void;
 /**
  * Deinitialize virtual mount api.
  * Errors on failure.
+ * @version Available with JS feature `storage-virtual`
  */
 export declare function virtualQuit(): void;
