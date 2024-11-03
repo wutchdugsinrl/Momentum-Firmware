@@ -118,6 +118,7 @@
   - Seader: Enable T=1, show error for timeout, fix wrong LRC logging, fix crash scanning NTAG215 with MFC option (by @bettse)
   - BLE Spam: Fix menu index callback (by @Willy-JL)
   - Solitaire: App rewrite, Added quick solve, New effects and sounds, Removed hacky canvas manipulation (by @doofy-dev)
+  - Flappy Bird: Yappy Bird mode, highscore system (by @jaylikesbunda & @the1anonlypr3)
   - CLI-GUI Bridge: Add more symbols to keyboard (#222 by @Willy-JL)
   - NRF24 Batch: Add Aeropac SN board txt file (by @vad7)
   - UL: Sub-GHz Bruteforcer: Add new protocols for existing dump option (by @xMasterX), use FW functions for top buttons (by @DerSkythe)
