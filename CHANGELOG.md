@@ -83,6 +83,8 @@
   - New `i2c` module (#259 by @jamisonderek)
   - New `spi` module (#272 by @jamisonderek)
   - OFW: Full-fledged JS SDK + npm packages (by @portasynthinca3)
+    - CFWs can have their own JS SDKs too! Check ours out at [`@next-flip/fz-sdk-mntm`](https://www.npmjs.com/package/)
+  - Added typedocs for all extra JS modules in Momentum (by @Willy-JL)
 - RPC: Added ASCII event support (#284 by @Willy-JL)
 - OFW: Settings: Clock editing & Alarm function (目覚め時計) (by @skotopes)
 - BadKB:
