@@ -10,6 +10,9 @@ import json5 from "json5";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const cfwSdkName = "@darkflippers/fz-sdk-ul/";
+const ofwSdkName = "@flipperdevices/fz-sdk/";
+
 async function build(config) {
     await esbuild.build({
         entryPoints: ["./dist/index.js"],
@@ -19,7 +22,7 @@ async function build(config) {
         bundle: true,
         minify: config.minify,
         external: [
-            "@flipperdevices/fz-sdk/*"
+            "@darkflippers/fz-sdk-ul/*"
         ],
         supported: {
             "array-spread": false,
@@ -73,6 +76,9 @@ async function build(config) {
 
     let outContents = fs.readFileSync(config.output, "utf8");
     outContents = "let exports = {};\n" + outContents;
+
+    // Transform CFW SDK name to OFW SDK name so all firmwares understand it
+    outContents = outContents.replaceAll(`require("${cfwSdkName}`, `require("${ofwSdkName}`);
 
     if (config.enforceSdkVersion) {
         const version = json5.parse(fs.readFileSync(path.join(__dirname, "package.json"), "utf8")).version;

@@ -1,10 +1,15 @@
 {
-  "name": "@flipperdevices/create-fz-app",
-  "version": "0.1.0",
-  "description": "Template package for JS apps Flipper Zero",
+  "name": "@darkflippers/create-fz-app-ul",
+  "version": "0.1.1",
+  "description": "Template package for JS apps for Flipper Zero using Unleashed Firmware JS SDK",
   "bin": "index.js",
   "type": "module",
   "keywords": [
+    "unleashed",
+    "unleashed firmware",
+    "ul",
+    "darkflippers",
+    "flipper cfw js",
     "flipper",
     "flipper zero"
   ],
@@ -12,7 +17,7 @@
   "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flipperdevices/flipperzero-firmware.git",
+    "url": "git+https://github.com/DarkFlippers/unleashed-firmware.git",
     "directory": "applications/system/js_app/packages/create-fz-app"
   },
   "dependencies": {

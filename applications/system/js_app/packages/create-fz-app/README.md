@@ -1,11 +1,15 @@
-# Flipper Zero JavaScript SDK Wizard
+# Flipper Unleashed Firmware JavaScript SDK Wizard
 This package contains an interactive wizard that lets you scaffold a JavaScript
-application for Flipper Zero.
+application for Flipper Zero using the Custom Unleashed Firmware JS SDK.
+
+This is a fork of the [Official Flipper Zero JS SDK Wizard](https://www.npmjs.com/package/@flipperdevices/create-fz-app),
+configured to use the [Unleashed FW JavaScript SDK]((https://www.npmjs.com/package/@darkflippers/fz-sdk-ul)) instead.
+No other changes are included.
 
 ## Getting started
 Create your application using the interactive wizard:
 ```shell
-npx @flipperdevices/create-fz-app@latest
+npx @darkflippers/create-fz-app-ul@latest
 ```
 
 Then, enter the directory with your application and launch it:

@@ -1,4 +1,10 @@
 /**
+ * SPI bus communication
+ * @version Available with JS feature `spi`
+ * @module
+ */
+
+/**
  * @brief Acquire SPI bus
  */
 export declare function acquire(): void;

@@ -267,6 +267,15 @@ void js_check_sdk_compatibility(struct mjs* mjs) {
 
 static const char* extra_features[] = {
     "baseline", // dummy "feature"
+
+    // extra modules
+    "blebeacon",
+    "i2c",
+    "spi",
+    "subghz",
+    "usbdisk",
+    "vgm",
+    "widget",
 };
 
 /**

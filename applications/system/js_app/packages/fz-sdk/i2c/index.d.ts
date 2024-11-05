@@ -1,4 +1,10 @@
 /**
+ * I2C bus communication
+ * @version Available with JS feature `i2c`
+ * @module
+ */
+
+/**
  * @brief Check if there is an I2C device ready on the bus
  * @param address The device address to check
  * @param timeout Timeout in milliseconds
