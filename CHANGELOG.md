@@ -55,6 +55,7 @@
 - Apps:
   - NFC: Cyborg Detector (by @RocketGod-git)
   - Sub-GHz: Radio Scanner (by @RocketGod-git)
+  - Tools: uPython (by @ofabel)
   - Games: Umpire Indicator (by @RocketGod-git)
 - Sub-GHz:
   - Show satellites count with an icon (#215 by @m7i-org)
