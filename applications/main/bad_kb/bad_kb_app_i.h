@@ -111,11 +111,4 @@ void bad_kb_config_refresh(BadKbApp* app);
 
 void bad_kb_config_adjust(BadKbConfig* cfg);
 
-void reverse_mac_addr(uint8_t mac_addr[GAP_MAC_ADDR_SIZE]) {
-    uint8_t tmp;
-    for(size_t i = 0; i < GAP_MAC_ADDR_SIZE / 2; i++) {
-        tmp = mac_addr[i];
-        mac_addr[i] = mac_addr[GAP_MAC_ADDR_SIZE - 1 - i];
-        mac_addr[GAP_MAC_ADDR_SIZE - 1 - i] = tmp;
-    }
-}
+void reverse_mac_addr(uint8_t mac_addr[GAP_MAC_ADDR_SIZE]);
