@@ -235,3 +235,4 @@
   - Mifare Nested: Superseded by NFC app after OFW PR 3822 (MIFARE Classic Key Recovery Improvements)
   - ESP Flasher:
     - Removed Airtag Scanner and ESP32-S2 Wardriver due to low user interest and to make space for Ghost ESP
+- API: Removed `furi_hal_bt_reverse_mac_addr()` and implemented in individual apps instead
