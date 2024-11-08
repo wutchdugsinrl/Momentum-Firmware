@@ -150,6 +150,7 @@
     - Decoding of URL-encoded URI characters (#267 by @jaylikesbunda)
     - SmartPoster record support (#275 by @Willy-JL)
     - Enable parsing NTAG I2C Plus 1k and 2k chips too (#237 by @RocketGod-git)
+  - NFC: Updated MFC dict, +100 keys from RRG proxmark3, +17 keys from Mifare Classic Tool
   - Added 6 new Mifare Classic keys from Bulgaria Hotel (#216 by @z3r0l1nk)
   - UL: Add iq aparts hotel key (by @xMasterX)
   - OFW/UL: Rename 'Detect Reader' to 'Extract MFC Keys' (by @bettse & @xMasterX)
