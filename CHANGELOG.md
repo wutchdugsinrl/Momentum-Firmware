@@ -103,7 +103,9 @@
   - Added typedocs for all extra JS modules in Momentum (by @Willy-JL)
 - RPC: Added ASCII event support (#284 by @Willy-JL)
 - FBT/SDK: New app flag UnloadAssetPacks to free RAM in heavy apps like NFC, MFKey, uPython (#260 by @Willy-JL)
-- OFW: Settings: Clock editing & Alarm function (目覚め時計) (by @skotopes)
+- Settings:
+  - OFW: Clock editing & Alarm function (目覚め時計) (by @skotopes)
+  - Add warnings for some settings you shouldn't touch like Debug, Sleep Method, Heap Trace (#296 by @Willy-JL)
 - BadKB:
   - OFW: Add linux/gnome badusb demo files (by @thomasnemer)
   - Add older qFlipper install demos for windows and macos (by @DXVVAY & @grugnoymeme)
@@ -179,7 +181,9 @@
   - Move more commands as plugins on SD, refactor plugin wrapper (#276 by @Willy-JL)
 - FBT: Optimize icons blob, scrub unused icons (#291 by @Willy-JL)
 - OFW: BadKB: Improve ChromeOS and GNOME demo scripts (by @kowalski7cc)
-- OFW: GUI: Change dialog_ex text ownership model (by @skotopes)
+- GUI:
+  - OFW: Change dialog_ex text ownership model (by @skotopes)
+  - Improve some error messages to be more clear, like Sub-GHz region missing and Main Menu .fap file missing (#296 by @Willy-JL)
 - OFW: CCID: App changes and improvements (by @kidbomb)
 - OFW: API: Exposed `view_dispatcher_get_event_loop` (by @CookiePLMonster)
 - Furi:
