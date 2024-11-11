@@ -114,7 +114,7 @@ steps:
         from_secret: fbt_link
 
   - name: "Bundle self-update packages"
-    image: kramos/alpine-zip
+    image: joshkeegan/zip
     commands:
       - cp artifacts-extra-apps/flipper-z-f7-update-${DRONE_TAG}e.tgz .
       - cp artifacts-rgb-patch/flipper-z-f7-update-${DRONE_TAG}r.tgz .
@@ -419,7 +419,7 @@ steps:
         from_secret: fbt_link
 
   - name: "Bundle self-update packages"
-    image: kramos/alpine-zip
+    image: joshkeegan/zip
     commands:
       - cp artifacts-extra-apps/flipper-z-f7-update-${DRONE_BUILD_NUMBER}e.tgz .
       - cp artifacts-rgb-patch/flipper-z-f7-update-${DRONE_BUILD_NUMBER}r.tgz .
