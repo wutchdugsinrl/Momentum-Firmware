@@ -141,6 +141,7 @@
   - CLI-GUI Bridge: Add more symbols to keyboard (#222 by @Willy-JL)
   - NRF24 Batch: Add Aeropac SN board txt file (by @vad7)
   - UL: Sub-GHz Bruteforcer: Add new protocols for existing dump option (by @xMasterX), use FW functions for top buttons (by @DerSkythe)
+  - UL: RFID/iButton Fuzzer: Add protocols Electra, Idteck, Gallagher, Nexwatch, refactor to make RFID protocols easier to add (by @SkeletonMan03), add more Dallas 1990 IDs (by @eblis)
   - UL: NRF24 Apps: Use string library compatible with OFW SDK (by @xMasterX)
   - UL: W5500 Ethernet: Various fixes and improvements (by @xMasterX)
   - OFW: SPI Mem Manager: Fixed UI rendering bug related to line breaks (by @portasynthinca3)
