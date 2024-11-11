@@ -538,7 +538,7 @@ steps:
       - rm -f changelogcut.txt
       - rm -f changelogcutfin.txt
       - echo '' >> changelogready.txt
-      - echo '## [Read full changelog](https://github.com/DarkFlippers/unleashed-firmware/releases/tag/'${DRONE_TAG}')' >> changelogready.txt
+      - echo '## [Read full changelog](https://github.com/DarkFlippers/unleashed-firmware/blob/dev/CHANGELOG.md)' >> changelogready.txt
       - sed -i 's/(buildnum)/'${DRONE_BUILD_NUMBER}'/g' .ci_files/devbuild_msg_discord.txt
       - sed -i 's/(commitsha)/'${DRONE_COMMIT_SHA}'/g' .ci_files/devbuild_msg_discord.txt
       - sed -i 's/(buildnum)/'${DRONE_BUILD_NUMBER}'/g' .ci_files/devbuild_msg_telegram.txt
