@@ -1,4 +1,5 @@
 ## Main changes
+- Current API: 78.1
 - SubGHz:
     - Frequency analyzer fixes and improvements:
         - **Enforce int module** (like in OFW) usage due to lack of required hardware on external boards (PathIsolate (+rf switch for multiple paths)) and incorrect usage and/or understanding the purpose of frequency analyzer app by users, it should be used only to get frequency of the remote placed around 1-10cm around flipper's left corner
@@ -35,6 +36,7 @@
 * SubGHz: Freq analyzer - Fix duplicated frequency lists and use user config for nearest frequency selector too
 * SubGHz: Code cleanup and fix for rare dupicated (Data) field cases
 * OFW: NFC TRT Parser: Additional checks to prevent false positives
+* OFW PR 3992: Loader: Fix BusFault in handling of OOM (by @Willy-JL)
 * OFW PR 3885: NFC: Add API to enforce ISO15693 mode (by @aaronjamt)
 * OFW: NFC: iso14443_4a improvements (by @RebornedBrain)
 * OFW: NFC: Plantain parser improvements (by @assasinfil) & fixes (by @mxcdoam)
@@ -69,6 +71,7 @@
 * OFW: Put errno into TCB
 * OFW: Fix USB-UART bridge exit screen stopping the bridge prematurely
 **More details on JS changes** (js changelog written by @Willy-JL , thanks!):
+- Our custom JS SDK can be found on npm now: https://www.npmjs.com/org/darkflippers
 - Non-exhaustive list of changes to help you fix your scripts:
     - `badusb`:
       - `setup()`: `mfr_name`, `prod_name`, `layout_path` parameters renamed to `mfrName`, `prodName`, `layoutPath`
