@@ -40,7 +40,7 @@ typedef enum {
 
 #define WORKER_ALL_RX_EVENTS                                                      \
     (WorkerEvtStop | WorkerEvtRxDone | WorkerEvtCfgChange | WorkerEvtLineCfgSet | \
-     WorkerEvtCtrlLineSet | WorkerEvtCdcTxComplete)
+     WorkerEvtCtrlLineSet | WorkerEvtCdcTxComplete | WorkerEvtSendBreak)
 #define WORKER_ALL_TX_EVENTS (WorkerEvtTxStop | WorkerEvtCdcRx)
 
 struct UsbUartBridge {
