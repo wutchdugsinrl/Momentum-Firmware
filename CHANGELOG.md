@@ -15,7 +15,7 @@
   - UL: NFC Magic: Added possibility to write 7b MFC to Gen1 tags (by @mishamyte)
 
 ### Fixed:
-- Nothing
+- OFW: GPIO: Merged gsurkov/vcp_break_support branch for usb uart bridge (WIP!!!)
 
 ### Removed:
 - Nothing
