@@ -1,5 +1,7 @@
 ### Added:
-- Nothing
+- Apps:
+  - Games: Pinball0 (by @rdefeo)
+  - NFC: Metroflip (by @luu176)
 
 ### Updated:
 - Apps:
