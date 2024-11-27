@@ -6,6 +6,7 @@
 ### Updated:
 - Apps:
   - BT/USB Remote: Add PTT support for Gather (by @SapphicCode)
+  - ESP Flasher: Add c3 and c6 to s3 option (by @jaylikesbunda)
   - FlipLibrary: Added Wikipedia, dog facts and random quotes, bug fixes (by @jblanked), connectivity and progress improvements (by @jamisonderek)
   - FlipSocial: Improved authentication (by @jblanked)
   - FlipStore: Many bugfixes, support ESP32 firmware downloads, allow deleting apps (by @jblanked)
