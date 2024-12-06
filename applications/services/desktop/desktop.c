@@ -191,7 +191,7 @@ static void desktop_input_event_callback(const void* value, void* context) {
     Desktop* desktop = context;
     if(event->type == InputTypePress) {
         desktop_start_auto_lock_timer(desktop);
-        //--- m96yda
+        //--- auto_power_off_timer
         desktop_start_auto_poweroff_timer(desktop);
         //---
     }

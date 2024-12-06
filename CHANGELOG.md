@@ -1,9 +1,14 @@
 ## Main changes
 - Current API: 78.2
+* SubGHz: Jolly Motors support (with add manually) (Thanks @pkooiman !)
+* Desktop: Auto Power Off Timer (by @Dmitry422 with some fixes by @xMasterX)
+* OFW PR 4025: Increase system stack's reserved memory size (Fix USB UART Bridge Crash) (by @Astrrra)
 * OFW: merged gsurkov/vcp_break_support branch for usb uart bridge (WIP!!!)
 * Apps: **Check out more Apps updates and fixes by following** [this link](https://github.com/xMasterX/all-the-plugins/commits/dev)
 ## Other changes
-* No changes yet :(
+* OFW: NFC: Plantain parser Last payment amount fix 
+* OFW: NFC clipper: BART station ids for San Lorenzo, Bay Fair
+* OFW: Fix typo for mf_classic_key_cahce_get_next_key() function
 <br><br>
 #### Known NFC post-refactor regressions list: 
 - Mifare Mini clones reading is broken (original mini working fine) (OFW)
