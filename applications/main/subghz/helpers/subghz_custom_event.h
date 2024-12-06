@@ -82,6 +82,7 @@ typedef enum {
     SetTypeAllmatic868,
     SetTypeCenturion433,
     SetTypeMonarch433,
+    SetTypeJollyMotors433,
     SetTypeSommer_FM_434,
     SetTypeSommer_FM_868,
     SetTypeSommer_FM238_434,
