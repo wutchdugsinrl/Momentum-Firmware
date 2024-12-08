@@ -58,13 +58,11 @@ void desktop_settings_load(DesktopSettings* settings) {
                 settings->dummy_mode = settings_v14->dummy_mode;
                 settings->display_clock = settings_v14->display_clock;
                 memcpy(
-                    settings_v14->favorite_apps,
                     settings->favorite_apps,
-                    sizeof(settings_v14->favorite_apps));
+                    settings_v14->favorite_apps,
+                    sizeof(settings->favorite_apps));
                 memcpy(
-                    settings_v14->dummy_apps,
-                    settings->dummy_apps,
-                    sizeof(settings_v14->dummy_apps));
+                    settings->dummy_apps, settings_v14->dummy_apps, sizeof(settings->dummy_apps));
             }
 
             free(settings_v14);
