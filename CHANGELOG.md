@@ -2,6 +2,8 @@
 - Apps:
   - Games: Pinball0 (by @rdefeo)
   - NFC: Metroflip (by @luu176)
+- UL: Sub-GHz: Jolly Motors support with add manually (by @pkooiman & @xMasterX)
+- OFW: Add VCP break support (by @gsurkov)
 
 ### Updated:
 - Apps:
@@ -27,7 +29,7 @@
 
 ### Fixed:
 - Desktop: Fixed Wardriving animation design (by @Davim09)
-- OFW: GPIO: Merged gsurkov/vcp_break_support branch for usb uart bridge (WIP!!!)
+- OFW: GPIO: Fix USB UART Bridge Crash by increasing system stack size (by @Astrrra)
 - NFC:
   - OFW: Plantain parser Last payment amount fix (by @mxcdoam)
   - OFW: Fix typo for mf_classic_key_cahce_get_next_key() function (by @luu176)
