@@ -32,6 +32,7 @@ typedef enum {
     SubGhzCustomEventSceneRpcLoad,
     SubGhzCustomEventSceneRpcButtonPress,
     SubGhzCustomEventSceneRpcButtonRelease,
+    SubGhzCustomEventSceneRpcButtonPressRelease,
     SubGhzCustomEventSceneRpcSessionClose,
 
     SubGhzCustomEventViewReceiverOK,
