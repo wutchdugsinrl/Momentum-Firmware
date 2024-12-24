@@ -252,7 +252,7 @@ static void desktop_stop_auto_poweroff_timer(Desktop* desktop) {
 
 static void desktop_auto_poweroff_arm(Desktop* desktop) {
     if(desktop->settings.auto_poweroff_delay_ms) {
-        if(desktop->input_events_subscription) {
+        if(!desktop->input_events_subscription) {
             desktop->input_events_subscription = furi_pubsub_subscribe(
                 desktop->input_events_pubsub, desktop_input_event_callback, desktop);
         }
