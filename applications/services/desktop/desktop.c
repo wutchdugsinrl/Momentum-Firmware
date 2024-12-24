@@ -156,7 +156,11 @@ static bool desktop_custom_event_callback(void* context, uint32_t event) {
         if(!desktop->app_running && !desktop->locked) {
             desktop_lock(desktop);
         }
-
+    } else if(event == DesktopGlobalAutoPowerOff) {
+        if(!desktop->app_running) {
+            Power* power = furi_record_open(RECORD_POWER);
+            power_off(power);
+        }
     } else if(event == DesktopGlobalSaveSettings) {
         desktop_settings_save(&desktop->settings);
         desktop_apply_settings(desktop);
@@ -232,9 +236,9 @@ static void desktop_auto_lock_inhibit(Desktop* desktop) {
 
 //--- auto_power_off_timer
 static void desktop_auto_poweroff_timer_callback(void* context) {
-    UNUSED(context);
-    Power* power = furi_record_open(RECORD_POWER);
-    power_off(power);
+    furi_assert(context);
+    Desktop* desktop = context;
+    view_dispatcher_send_custom_event(desktop->view_dispatcher, DesktopGlobalAutoPowerOff);
 }
 
 static void desktop_start_auto_poweroff_timer(Desktop* desktop) {
