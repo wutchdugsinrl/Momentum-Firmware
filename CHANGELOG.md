@@ -3,6 +3,11 @@
   - Games: Pinball0 (by @rdefeo)
   - NFC: Metroflip (by @luu176)
 - UL: Sub-GHz: Jolly Motors support with add manually (by @pkooiman & @xMasterX)
+- OFW: Desktop: Add winter animations (by @Astrrra)
+- OFW: Furi: Pipe support (by @portasynthinca3)
+- OFW: Furi: Thread stdin support (by @portasynthinca3)
+- OFW: RPC: Command to send a signal once (by @Astrrra)
+- OFW: API: Added `flipper_format_write_empty_line()` (by @janwiesemann)
 - OFW: Add VCP break support (by @gsurkov)
 
 ### Updated:
@@ -32,10 +37,19 @@
 
 ### Fixed:
 - Desktop: Fixed Wardriving animation design (by @Davim09)
+- OFW: Fix lost BadBLE keystrokes (by @Astrrra)
 - OFW: GPIO: Fix USB UART Bridge Crash by increasing system stack size (by @Astrrra)
+- OFW: Loader: Fix BusFault in handling of OOM (by @Willy-JL)
 - NFC:
   - OFW: Plantain parser Last payment amount fix (by @mxcdoam)
-  - OFW: Fix typo for mf_classic_key_cahce_get_next_key() function (by @luu176)
+  - OFW: Fix skylander ID reading (by @bettse)
+  - OFW: Fix ISO15693 stuck in wrong mode (by @RebornedBrain)
+  - OFW: Fix MFUL PWD_AUTH command creation when 0x00 in password (by @GMMan)
+  - OFW: Fix typo for `mf_classic_key_cahce_get_next_key()` function (by @luu176)
+- OFW: U2F: Fix message digest memory leak (by @GMMan)
+- OFW: JS: SDK workaround incorrect serial port handling by OS (by @portasynthinca3)
+- OFW: FBT: Fix invalid path errors on Windows with UTF8 paths (by @Alex4386)
 
 ### Removed:
-- Nothing
+- NFC: Previous fix for ISO15693 stuck in wrong mode (#225)
+  - Removes APIs `nfc_iso15693_detect_mode()`, `nfc_iso15693_force_1outof4()`, `nfc_iso15693_force_1outof256()`
