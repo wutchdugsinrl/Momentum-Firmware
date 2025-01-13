@@ -55,6 +55,7 @@
 - OFW: GPIO: Fix USB UART Bridge Crash by increasing system stack size (by @Astrrra)
 - OFW: Loader: Fix BusFault in handling of OOM (by @Willy-JL)
 - NFC:
+  - XERO: Fix issue with MFC key recovery state machine performing key reuse early (by @noproto)
   - OFW: Plantain parser Last payment amount fix (by @mxcdoam)
   - OFW: Fix skylander ID reading (by @bettse)
   - OFW: Fix MIFARE Plus detection (by @GMMan)
