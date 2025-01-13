@@ -2,6 +2,7 @@
 - Apps:
   - Games: Pinball0 (by @rdefeo)
   - NFC: Metroflip (by @luu176)
+- BadKB: Added german Mac keyboard Layout (#325 by @Cloudy261)
 - UL: Sub-GHz: Jolly Motors support with add manually (by @pkooiman & @xMasterX)
 - OFW: Desktop: Add winter animations (by @Astrrra)
 - OFW: Furi: Pipe support (by @portasynthinca3)
